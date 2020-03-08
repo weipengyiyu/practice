@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1583639696 source:e:\codeblock_work\info\list.c
+	"main.h"
+
+1583637115 e:\codeblock_work\info\main.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"list.h"
+	"show.h"
+
+1583639464 e:\codeblock_work\info\list.h
+
+1583639754 e:\codeblock_work\info\show.h
+
+1583639764 source:e:\codeblock_work\info\show.c
+	"main.h"
+
+1583591807 source:e:\codeblock_work\info\main.c
+	"main.h"
+
