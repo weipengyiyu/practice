@@ -13,3 +13,17 @@
 1583754471 source:e:\codeblock_work\info\main.c
 	"main.h"
 
+1583753769 source:e:\my_github\practice\info\hash.c
+	"main.h"
+
+1583751928 e:\my_github\practice\info\main.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"hash.h"
+
+1583756055 e:\my_github\practice\info\hash.h
+
+1583756295 source:e:\my_github\practice\info\main.c
+	"main.h"
+

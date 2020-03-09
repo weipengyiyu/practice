@@ -16,7 +16,7 @@ int  hash_query(hashtable *h, char *query);
 int  hash_add(hashtable *h, int key, hashtable *data, int *flag);
 int  hash_clean(hashtable *h, char *clean);
 void hash_show(hashtable *h, int *flag);
-int  hash_modifi(hashtable *h, char *modifi, hashtable *data);
+int  hash_modifi(hashtable *h, char *modifi, hashtable *data, int *flag);
 int  name_to_key(char *name, int *key);
 
 #endif /* HASH_H_ */

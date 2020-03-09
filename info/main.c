@@ -130,7 +130,7 @@ void Option_three(hashtable *h)
 }
 
 /*修改员工信息*/
-void Option_four(hashtable *h)
+void Option_four(hashtable *h, int *flag)
 {
     hashtable temp;
     int flag1 = 1;
@@ -190,7 +190,7 @@ void Option_four(hashtable *h)
         printf("你输入的数据有误，请输入小于65535的正数！\n");
     }
 
-    if(!hash_modifi(h, name, &temp))
+    if(!hash_modifi(h, name, &temp, flag))
     {
         printf("\n成功修改！\n");
     }
@@ -258,7 +258,7 @@ void Option_to_menu(hashtable *h, int *flag)
             Option_to_menu(h, flag);
             break;
         case 4:
-            Option_four(h);
+            Option_four(h, flag);
             Option_to_menu(h, flag);
             break;
         case 5:

@@ -110,8 +110,8 @@ int hash_query(hashtable *h, char *query)
     return 0;
 }
 
-/*通过键值，找到下标，再将其修改*/
-int hash_modifi(hashtable *h, char *modifi, hashtable *data)
+/*通过键值，找到下标，再将其修改， 修改后的数据是另外存储的*/
+int hash_modifi(hashtable *h, char *modifi, hashtable *data, int *flag)
 {
     hashtable *temp = NULL;
     temp = h;
@@ -129,10 +129,10 @@ int hash_modifi(hashtable *h, char *modifi, hashtable *data)
         if((temp[index].age != 0) && (strcmp(temp[index].name, modifi) == 0))
         {
             iflag = 0;
-            strcpy(temp[index].name, data->name);
-            temp[index].age = data->age;
-            temp[index].work_age = data->work_age;
-            temp[index].salary = data->salary;
+            memset(temp[index].name,0, sizeof(char)*10);
+            temp[index].age = 0;
+            temp[index].work_age = 0;
+            temp[index].salary = 0;
         }
         else
         {
@@ -147,6 +147,8 @@ int hash_modifi(hashtable *h, char *modifi, hashtable *data)
         }
     }while(iflag);
 
+    name_to_key(data->name, &key);
+    hash_add(h, key, data, flag);
     return re;
 }
 
