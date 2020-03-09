@@ -31,18 +31,14 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="list.c">
+		<Unit filename="hash.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="list.h" />
+		<Unit filename="hash.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="main.h" />
-		<Unit filename="show.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="show.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
