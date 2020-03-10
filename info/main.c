@@ -86,6 +86,7 @@ void Option_one(hashtable *h, int *flag)
     }
 
     free(tempdata.name);
+    tempdata.name = NULL;
 }
 
 /*显示员工信息*/
@@ -200,6 +201,7 @@ void Option_four(hashtable *h, int *flag)
     }
 
     free(name);
+    name = NULL;
 }
 
 /*清除数据，并未删除*/
@@ -231,6 +233,7 @@ void Option_five(hashtable *h)
     }
 
     free(temp);
+    temp = NULL;
 }
 
 void Option_to_menu(hashtable *h, int *flag)

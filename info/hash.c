@@ -81,6 +81,7 @@ int hash_query(hashtable *h, char *query)
     int i = 0;
     int iflag = 1;
     int key = -1;
+    int re = 0;
 
     name_to_key(query, &key);
 
@@ -101,13 +102,14 @@ int hash_query(hashtable *h, char *query)
             i++;
             if(i > 5)
             {
-            	printf("\n已经线性了5次，请调整输入参数\n");
+            	printf("\n请调整输入参数\n");
+            	re = 1;
             	break;
             }
         }
     }while(iflag);
 
-    return 0;
+    return re;
 }
 
 /*通过键值，找到下标，再将其修改， 修改后的数据是另外存储的*/
